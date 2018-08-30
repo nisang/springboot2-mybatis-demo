@@ -1,7 +1,9 @@
 server:
+  servlet: 
+    context-path: /demo
   port: 8080
-
-
+  uri-encoding: utf-8
+ 
 spring:
     datasource:
         name: mysql_test
@@ -34,9 +36,8 @@ spring:
           max-pool-prepared-statement-per-connection-size: 20
 
 mybatis:
-  mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.demo.model
-
+  package-name: com.demo.mapper
 
 
 #pagehelper
